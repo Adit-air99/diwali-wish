@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="hi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>शुभ दीपावली 🪔</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            min-height: 100vh;
+            font-family: 'Noto Sans Devanagari', sans-serif;
+            background: radial-gradient(circle, #551000, #180500, #080000);
+            color: #fff5d6;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            overflow-x: hidden;
+            padding: 25px 15px;
+        }
+        
+        .container {
+            max-width: 750px;
+            width: 100%;
+            padding: 40px 25px;
+            border: 2px solid #e9a52c;
+            border-radius: 25px;
+            background: rgba(50, 10, 0, 0.75);
+            box-shadow: 0 0 35px #ff8c00;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .top {
+            font-size: 55px;
+            animation: glow 2s infinite alternate;
+        }
+        
+        h1 {
+            font-size: clamp(38px, 8vw, 65px);
+            color: #ffcf50;
+            text-shadow: 0 0 15px #ff8c00;
+            margin: 15px 0;
+        }
+        
+        h2 {
+            color: #ffdf91;
+            font-size: 25px;
+            margin-bottom: 25px;
+        }
+        
+        .message {
+            font-size: 19px;
+            line-height: 2;
+            color: #fff0cf;
+            margin: 20px 0;
+        }
+        
+        .highlight {
+            color: #ffd15c;
+            font-weight: bold;
+        }
+        
+        .diyas {
+            font-size: 45px;
+            margin: 25px 0;
+            animation: float 2s infinite ease-in-out;
+        }
+        
+        button {
+            background: linear-gradient(45deg, #ff9d00, #ffe078);
+            color: #501000;
+            border: none;
+            padding: 14px 28px;
+            border-radius: 30px;
+            font-size: 17px;
+            font-weight: bold;
+            cursor: pointer;
+            margin-top: 15px;
+            transition: 0.3s;
+        }
+        
+        button:hover {
+            transform: scale(1.08);
+            box-shadow: 0 0 20px #ffbf00;
+        }
+        
+        #surprise {
+            display: none;
+            margin-top: 25px;
+            font-size: 20px;
+            line-height: 1.8;
+            color: #ffe9a9;
+        }
+        
+        .footer {
+            margin-top: 30px;
+            font-size: 15px;
+            color: #e8b96b;
+        }
+        
+        .sparkle {
+            position: fixed;
+            top: -20px;
+            animation: fall linear infinite;
+            pointer-events: none;
+            z-index: 1;
+        }
+        
+        @keyframes glow {
+            from {
+                text-shadow: 0 0 10px orange;
+            }
+            to {
+                text-shadow: 0 0 30px gold, 0 0 50px orange;
+            }
+        }
+        
+        @keyframes float {
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-12px);
+            }
+        }
+        
+        @keyframes fall {
+            to {
+                transform: translateY(110vh) rotate(360deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="top">🪔✨🎆</div>
+
+        <h1>शुभ दीपावली!</h1>
+
+        <h2>आप सभी को दीपावली की हार्दिक शुभकामनाएँ ❤️</h2>
+
+        <div class="diyas">🪔 🪔 🪔</div>
+
+        <div class="message">
+            यह दीपावली आपके जीवन में
+            <span class="highlight">सुख, शांति और समृद्धि</span> का नया उजाला लेकर आए। ✨
+            <br><br> माँ लक्ष्मी की कृपा से आपके घर में धन-धान्य और खुशियों का वास हो। 🙏
+            <br><br> भगवान श्री गणेश आपके सभी विघ्न दूर करें और आपके हर सपने को नई उड़ान दें। 🌸
+            <br><br> आपके जीवन से हर अंधकार दूर हो और सफलता, प्रेम एवं खुशियों के दीप हमेशा जलते रहें। ❤️
+        </div>
+
+        <div class="diyas">🌺 🪔 🌺</div>
+
+        <p class="highlight" style="font-size:22px;">
+            रोशनी का यह त्योहार आपके जीवन को खुशियों से भर दे! 🎇
+        </p>
+
+        <button onclick="showSurprise()">
+        ❤️ एक खास शुभकामना पढ़ें
+    </button>
+
+        <div id="surprise">
+            ✨ आपका हर दिन दीपावली जैसा रोशन हो।<br> 🙏 आपके परिवार पर ईश्वर की कृपा बनी रहे।<br> 🌸 हर कदम पर सफलता आपका स्वागत करे।<br><br> **दीपावली की ढेर सारी शुभकामनाएँ!** ❤️
+        </div>
+        <div class="footer">
+            wishing you a very Happy Diwali! 🪔✨
+        </div>
+
+        <div class="sweet-section">
+            <h2>🎁 एक छोटी सी मिठास आपकी तरफ से!</h2>
+            <p>Click the gift box to open your Diwali surprise ❤️</p>
+
+            <button id="sweetBtn" onclick="openSweets()">
+        🎁 मिठाई का डिब्बा खोलें
+    </button>
+
+            <div id="sweets" class="sweets">
+                <h2>🍬 आपकी पसंदीदा मिठाइयाँ!</h2>
+
+                <div class="sweet-items">
+                    <div class="sweet">
+                        <div class="sweet-emoji">💛</div>
+                        <h3>काजू कतली</h3>
+                        <p>मिठास जो दिल जीत ले! 😍</p>
+                    </div>
+
+                    <div class="sweet">
+                        <div class="sweet-emoji">🍥</div>
+                        <h3>सोन पापड़ी</h3>
+                        <p>खुशियों की परतों जैसी! ❤️</p>
+                    </div>
+                </div>
+
+                <h3>खाइए और खुशियाँ बाँटिए! 🪔</h3>
+            </div>
+        </div>
+
+
+        <!-- DIWALI SWEET BOX -->
+        <style>
+            .sweet-section {
+                margin: 35px auto;
+                padding: 25px 15px;
+                border: 2px solid #ffd36a;
+                border-radius: 20px;
+                background: rgba(255, 180, 30, 0.08);
+                text-align: center;
+            }
+            
+            .sweet-section h2 {
+                color: #ffd36a;
+                margin-bottom: 15px;
+            }
+            
+            .sweet-section p {
+                color: #fff0cf;
+                line-height: 1.8;
+            }
+            
+            .sweet-button {
+                background: linear-gradient(45deg, #ff9d00, #ffe078);
+                color: #501000;
+                border: none;
+                padding: 14px 25px;
+                border-radius: 30px;
+                font-size: 16px;
+                font-weight: bold;
+                cursor: pointer;
+                margin-top: 15px;
+            }
+            
+            .sweets {
+                display: none;
+                margin-top: 25px;
+            }
+            
+            .sweets.show {
+                display: block;
+                animation: sweetReveal 0.7s ease;
+            }
+            
+            .sweet-items {
+                display: flex;
+                justify-content: center;
+                flex-wrap: wrap;
+                gap: 20px;
+                margin: 20px 0;
+            }
+            
+            .sweet {
+                background: #fff0d0;
+                color: #632000;
+                padding: 20px;
+                border-radius: 18px;
+                width: 210px;
+                box-shadow: 0 0 18px #ffb52a;
+            }
+            
+            .sweet img {
+                width: 100%;
+                height: 125px;
+                object-fit: cover;
+                border-radius: 12px;
+            }
+            
+            .sweet h3 {
+                margin-top: 12px;
+                color: #8b3100;
+            }
+            
+            .sweet p {
+                color: #632000;
+                font-size: 14px;
+            }
+            
+            @keyframes sweetReveal {
+                from {
+                    opacity: 0;
+                    transform: scale(0.7);
+                }
+                to {
+                    opacity: 1;
+                    transform: scale(1);
+                }
+            }
+        </style>
+
+        <div class="sweet-section">
+
+            <h2>🎁 A Little Diwali Surprise!</h2>
+
+            <p>
+                मिठास बाँटने से खुशियाँ दोगुनी हो जाती हैं।
+                <br> Click below to open your sweet surprise! ❤️
+            </p>
+
+            <button class="sweet-button" onclick="
+        var box = document.getElementById('sweetBox');
+        box.style.display = box.style.display === 'block' ? 'none' : 'block';
+    ">
+        🎁 Open Your Mithai Box
+    </button>
+
+            <div id="sweetBox" class="sweets">
+
+                <h2>🍬 आपकी मिठाइयाँ तैयार हैं!</h2>
+
+                <div class="sweet-items">
+
+                    <div class="sweet">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/a/ac/Kaju_katli_sweet.jpg?utm_source=en.wikipedia.org&utm_campaign=index&utm_content=original" alt="Kaju Katli">
+                        <h3>💛 काजू कतली</h3>
+                        <p>मिठास जो हर दिल को जीत ले! 😍</p>
+                    </div>
+
+                    <div class=" sweet ">
+                        <img src="https://ganguram.com/cdn/shop/files/soan-papdi.jpg?v=1757319687&width=480 " alt="Indian festive sweets ">
+                        <h3>❤️ सोन पापड़ी</h3>
+                        <p>खुशियों की परतों जैसी मिठास!</p>
+                    </div>
+
+                </div>
+
+                <h3 style="color:#ffd36a; ">
+                    खाइए, खिलाइए और खुशियाँ बाँटिए! 🪔
+                </h3>
+
+                <p>Wishing you a sweet and sparkling Diwali from Aditya!! ✨</p>
+
+            </div>
+        </div>
+        <!-- END DIWALI SWEET BOX -->
+
+        <div class="footer ">
+            Made with ❤️ & शुभकामनाएँ <br> 🪔 शुभ दीपावली 🪔
+        </div>
+
+    </div>
+
+    <script>
+        function showSurprise() {
+            document.getElementById("surprise ").style.display = "block ";
+        }
+
+        function openSweets() {
+            document.getElementById("sweets").classList.toggle("show");
+        }
+
+        // Floating festive sparkles
+        const symbols = ["✨ ", "⭐ ", "🌟 ", "🎇 "];
+
+        function createSparkle() {
+            const sparkle = document.createElement("div ");
+            sparkle.className = "sparkle ";
+            sparkle.innerHTML = symbols[
+                Math.floor(Math.random() * symbols.length)
+            ];
+
+            sparkle.style.left = Math.random() * 100 + "vw ";
+            sparkle.style.fontSize = (12 + Math.random() * 20) + "px ";
+            sparkle.style.animationDuration = (3 + Math.random() * 5) + "s ";
+
+            document.body.appendChild(sparkle);
+
+            setTimeout(() => sparkle.remove(), 8000);
+        }
+
+        setInterval(createSparkle, 300);
+    </script>
+
+</body>
+
+</html>
